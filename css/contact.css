@@ -1,0 +1,232 @@
+.contact-page {
+    width: 100%;
+    padding: 40px 24px;
+    box-sizing: border-box;
+}
+
+.profile-title{
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+.profile-card {
+    position: relative;
+    display: flex;
+    gap: 32px;
+    padding: 32px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.profile-image-box {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.profile-image {
+    width: 100%;
+    /* margin-top: 10%; */
+    /* aspect-ratio: 1 / 1; */
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-name {
+    margin-bottom: 8px;
+    font-size: 32px;
+    color: #222;
+}
+
+.profile-job {
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.profile-desc {
+    margin-bottom: 24px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+}
+
+.info-list li {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.info-list span {
+    width: 100px;
+    color: #777;
+}
+
+.info-list strong {
+    color: #222;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.contact-buttons a {
+    padding: 12px 18px;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.contact-buttons a:hover {
+    background-color: #1d4ed8;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+    .profile-card {
+        flex-direction: column;
+        padding: 24px;
+    }
+
+    .profile-image-box {
+        width: 100%;
+        max-width: 240px;
+        margin: 0 auto;
+    }
+
+    .profile-name {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .profile-job {
+        text-align: center;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    .contact-buttons a {
+        text-align: center;
+    }
+}
+.profile-tech {
+    margin-top: 32px;
+    padding: 12px 32px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.profile-section-title {
+    font-size: 1.5rem;
+    color: #222;
+}
+
+.tech-table {
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tech-row {
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tech-row:last-child {
+    border-bottom: none;
+}
+
+.tech-category {
+    padding: 16px;
+    border-right: 1px solid #e5e7eb;
+    background-color: #f9fafb;
+    font-weight: 700;
+    color: #333;
+}
+
+.tech-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 14px 16px;
+}
+
+.profile-tech-badge {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.profile-tech-html {
+    background-color: #e34f26;
+}
+
+.profile-tech-css {
+    background-color: #1572b6;
+}
+
+.profile-tech-js {
+    background-color: #f7df1e;
+    color: #222;
+}
+
+.profile-tech-react {
+    background-color: #61dafb;
+    color: #222;
+}
+
+.profile-tech-node {
+    background-color: #3c873a;
+}
+
+.profile-tech-csharp {
+    background-color: #68217a;
+}
+
+.profile-tech-unity {
+    background-color: #222222;
+}
+
+.profile-tech-mysql {
+    background-color: #00758f;
+}
+
+@media (max-width: 768px) {
+    .profile-tech {
+        padding: 24px;
+    }
+
+    .tech-row {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-category {
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+    }
+}
