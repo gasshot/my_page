@@ -93,18 +93,39 @@ $(function () {
     }
 
     function renderPage(pageName) {
-        $(".content").html(pages[pageName]());
+        const pageUrl = pages[pageName];
 
-        $(".nav-button").removeClass("active");
-        $(`.nav-button[data-page="${pageName}"]`).addClass("active");
-
-        if (pageName === "home") {
-            index = 0;
-            changeSlide(index);
-            startAutoSlide();
-        } else {
-            stopAutoSlide();
+        if (!pageUrl) {
+            $(".content").html("<p>존재하지 않는 페이지입니다.</p>");
+            return;
         }
+
+        fetch(pageUrl)
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error("페이지를 불러오지 못했습니다.");
+                }
+
+                return response.text();
+            })
+            .then(function (html) {
+                $(".content").html(html);
+
+                $(".nav-button").removeClass("active");
+                $(`.nav-button[data-page="${pageName}"]`).addClass("active");
+
+                if (pageName === "home") {
+                    index = 0;
+                    changeSlide(index);
+                    startAutoSlide();
+                } else {
+                    stopAutoSlide();
+                }
+            })
+            .catch(function () {
+                $(".content").html("<p>페이지를 불러오는 중 오류가 발생했습니다.</p>");
+                stopAutoSlide();
+            });
     }
 
     $(".nav-button").on("click", function () {
@@ -122,6 +143,12 @@ $(function () {
 
     $(".content").on("click", ".navBtn", function () {
         const pageName = skills[index].page;
+
+        renderPage(pageName);
+    });
+
+    $(".content").on("click", ".page-link", function () {
+        const pageName = $(this).data("page");
 
         renderPage(pageName);
     });
