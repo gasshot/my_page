@@ -1,0 +1,277 @@
+.jquery-page {
+    padding: 32px;
+    background:
+        radial-gradient(circle at top left, rgba(0, 174, 255, 0.18), transparent 34%),
+        linear-gradient(180deg, #eef7ff 0%, #f8fafc 45%, #eef6ff 100%);
+}
+
+/* 모든 섹션 기본 */
+.jquery-page .content-section {
+    position: relative;
+    margin-bottom: 34px;
+    padding: 34px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(125, 211, 252, 0.45);
+    border-radius: 18px;
+    box-shadow:
+        0 18px 40px rgba(15, 23, 42, 0.10),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+}
+
+/* 은은한 장식 라인 */
+.jquery-page .content-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 34px;
+    width: 90px;
+    height: 4px;
+    background: linear-gradient(90deg, #0ea5e9, #22d3ee);
+    border-radius: 0 0 999px 999px;
+}
+
+/* 첫 번째 소개 영역 */
+.jquery-page .content-section:first-child {
+    background:
+        linear-gradient(rgba(3, 7, 18, 0.88), rgba(3, 7, 18, 0.88)),
+        repeating-linear-gradient(
+            90deg,
+            rgba(56, 189, 248, 0.12) 0,
+            rgba(56, 189, 248, 0.12) 1px,
+            transparent 1px,
+            transparent 42px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            rgba(56, 189, 248, 0.08) 0,
+            rgba(56, 189, 248, 0.08) 1px,
+            transparent 1px,
+            transparent 42px
+        );
+    border: 1px solid #164e63;
+    box-shadow:
+        0 22px 44px rgba(8, 47, 73, 0.35),
+        inset 0 0 40px rgba(14, 165, 233, 0.12);
+}
+
+.jquery-page .content-info {
+    display: grid;
+    grid-template-columns: 390px 1fr;
+    gap: 46px;
+    align-items: center;
+    width: 100%;
+}
+
+/* 이미지 */
+.jquery-page .rect-img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid rgba(125, 211, 252, 0.55);
+    box-shadow:
+        0 0 0 6px rgba(14, 165, 233, 0.08),
+        0 22px 38px rgba(0, 0, 0, 0.45),
+        0 0 42px rgba(14, 165, 233, 0.28);
+}
+
+/* 첫 번째 영역 텍스트 */
+.jquery-page .content-section:first-child ul {
+    position: relative;
+    margin: 0;
+    padding: 28px 30px;
+    list-style: none;
+    border-radius: 16px;
+    background: rgba(2, 6, 23, 0.58);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    backdrop-filter: blur(8px);
+}
+
+.jquery-page .content-section:first-child ul::before {
+    content: "jQuery";
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: rgba(14, 165, 233, 0.18);
+    color: #7dd3fc;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.jquery-page .content-section:first-child li {
+    position: relative;
+    margin-bottom: 16px;
+    padding-left: 28px;
+    color: #e0f2fe;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.jquery-page .content-section:first-child li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #38bdf8;
+    box-shadow: 0 0 14px #38bdf8;
+}
+
+/* 제목 */
+.jquery-page .content-section h3 {
+    margin-bottom: 22px;
+    font-size: 25px;
+    font-weight: 900;
+    color: #0f172a;
+}
+
+/* 기본 목록 */
+.jquery-page ul,
+.jquery-page ol {
+    padding-left: 22px;
+}
+
+.jquery-page li {
+    margin-bottom: 12px;
+    color: #334155;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.jquery-page li::marker {
+    color: #0284c7;
+    font-weight: 800;
+}
+
+/* 기본 역할 카드화 */
+.jquery-page .content-section:nth-child(2) ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.jquery-page .content-section:nth-child(2) li {
+    position: relative;
+    min-height: 120px;
+    margin-bottom: 0;
+    padding: 56px 20px 22px;
+    background:
+        linear-gradient(180deg, #ffffff, #f0f9ff);
+    border: 1px solid #bae6fd;
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(2, 132, 199, 0.10);
+    transition: 0.25s;
+}
+
+.jquery-page .content-section:nth-child(2) li::before {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0284c7;
+    color: #ffffff;
+    font-weight: 900;
+    box-shadow: 0 8px 18px rgba(2, 132, 199, 0.28);
+}
+
+.jquery-page .content-section:nth-child(2) li:nth-child(1)::before {
+    content: "01";
+}
+
+.jquery-page .content-section:nth-child(2) li:nth-child(2)::before {
+    content: "02";
+}
+
+.jquery-page .content-section:nth-child(2) li:nth-child(3)::before {
+    content: "03";
+}
+
+.jquery-page .content-section:nth-child(2) li:hover {
+    transform: translateY(-8px);
+    border-color: #0ea5e9;
+    box-shadow: 0 18px 32px rgba(14, 165, 233, 0.22);
+}
+
+/* 코드 영역 */
+.jquery-page .content-section:nth-child(3) {
+    background: #020617;
+    border-color: #1e293b;
+    box-shadow: 0 22px 44px rgba(2, 6, 23, 0.30);
+}
+
+.jquery-page .content-section:nth-child(3)::before {
+    background: linear-gradient(90deg, #22c55e, #38bdf8);
+}
+
+.jquery-page .content-section:nth-child(3) h3 {
+    color: #e0f2fe;
+}
+
+.jquery-page pre {
+    position: relative;
+    margin-top: 18px;
+    padding: 54px 24px 24px;
+    overflow-x: auto;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 16px;
+    box-shadow: inset 0 0 28px rgba(56, 189, 248, 0.06);
+}
+
+.jquery-page pre::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 22px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ef4444;
+    box-shadow:
+        22px 0 #f59e0b,
+        44px 0 #22c55e;
+}
+
+.jquery-page pre code {
+    padding: 0;
+    color: #dbeafe;
+    background: none;
+    font-size: 15px;
+    line-height: 1.8;
+    font-family: Consolas, Monaco, "Courier New", monospace;
+}
+
+.jquery-page code {
+    color: #38bdf8;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    .jquery-page {
+        padding: 16px;
+    }
+
+    .jquery-page .content-section {
+        padding: 24px;
+    }
+
+    .jquery-page .content-info {
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
+
+    .jquery-page .content-section:nth-child(2) ul {
+        grid-template-columns: 1fr;
+    }
+}
