@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이력서</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px 0;
+            background-color: #e5e7eb;
+        }
+
+        .resume-page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            padding: 8mm;
+            background-color: #ffffff;
+            box-sizing: border-box;
+        }
+
+        /* body {
+            margin: 0% auto;
+            max-width: 50vw;
+            max-height: 10vh;
+        } */
+
+        .resume-header {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            min-height: 88px;
+            padding: 0 25px;
+            /* background-color: #333333; */
+            background: linear-gradient(135deg, #000000, #4f4f4f);
+            color: #ffffff;
+        }
+
+        .resume-header #resume-title {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+            gap: 12px;
+        }
+
+        .resume-header #resume-title span {
+            font-size: 2rem;
+            letter-spacing: 0.5px;
+            font-weight: bold;
+        }
+
+        #header-comment {
+            position: absolute;
+            right: 50px;
+            bottom: 16px;
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #dddddd;
+            text-align: right;
+        }
+
+        .resume-header #profile-imgBox {
+            border: 1px solid white;
+            width: 120px;
+            height: 180px;
+            background-color: rgb(0, 0, 0);
+            margin-bottom: 10px;
+        }
+
+        .resume-main {
+            padding: 32px 0px;
+        }
+
+        .resume-section {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            gap: 28px;
+            margin-bottom: 28px;
+        }
+
+        .section-label {
+            border-top: 2px solid #555;
+            padding-top: 10px;
+        }
+
+        .section-label h2 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .section-label p {
+            margin: 4px 0 0;
+            font-size: 12px;
+            color: #777;
+        }
+
+        .section-content {
+            border-top: 2px solid #555;
+        }
+
+        .info-row {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            padding: 7px 0;
+            border-bottom: 1px solid #ddd;
+            font-size: 13px;
+        }
+
+        .info-row span {
+            font-weight: 700;
+        }
+
+        .info-row strong {
+            font-weight: 400;
+        }
+
+        .content-row {
+            display: grid;
+            grid-template-columns: 1.4fr 1.5fr 1fr 0.8fr;
+            padding: 7px 0;
+            border-bottom: 1px solid #ddd;
+            font-size: 13px;
+        }
+
+        .license-row {
+            grid-template-columns: 1.4fr 1.5fr 1.8fr;
+        }
+
+        :root {
+    --resume-row-height: 32px;
+}
+
+.info-row,
+.content-row {
+    min-height: var(--resume-row-height);
+    padding: 0;
+    align-items: center;
+}
+
+.section-content.keep-rows {
+    min-height: calc(var(--resume-row-height) * 4);
+}
+    </style>
+</head>
+
+<body>
+    <div class="resume-page">
+        <header class="resume-header">
+            <div id="resume-title">
+                <span>이력서</span>
+                <span>Resume</span>
+
+                <p id="header-comment">
+                    성실하게 배우고 성장하는 프론트엔드 개발자
+                </p>
+            </div>
+
+            <div id="profile-imgBox"><img src="" alt="증명사진"></div>
+        </header>
+
+        <main class="resume-main">
+            <section class="resume-section">
+                <div class="section-label">
+                    <h2>기본정보</h2>
+                    <p>Personal Information</p>
+                </div>
+
+                <div class="section-content">
+                    <div class="info-row">
+                        <span>이름</span>
+                        <strong>김하늘</strong>
+                    </div>
+                    <div class="info-row">
+                        <span>생년월일</span>
+                        <strong>1992.01.14</strong>
+                    </div>
+                    <div class="info-row">
+                        <span>연락처</span>
+                        <strong>010-1234-5678</strong>
+                    </div>
+                    <div class="info-row">
+                        <span>주소</span>
+                        <strong>서울특별시 구로구 구로디지털로 11</strong>
+                    </div>
+                    <div class="info-row">
+                        <span>병역</span>
+                        <strong>해당없음</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resume-section">
+                <div class="section-label">
+                    <h2>학력사항</h2>
+                    <p>Education</p>
+                </div>
+
+                <div class="section-content">
+                    <div class="content-row">
+                        <span>2039.03 - 2039.02</span>
+                        <span>고등학교</span>
+                        <span>인문계</span>
+                        <span>-</span>
+                    </div>
+                    <div class="content-row">
+                        <span>2039.03 - 2039.02</span>
+                        <span>대학교</span>
+                        <span>인문계</span>
+                        <span>-</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resume-section">
+                <div class="section-label">
+                    <h2>보유자격증</h2>
+                    <p>License</p>
+                </div>
+
+                <div class="section-content">
+                    <div class="content-row license-row">
+                        <span>2039.03</span>
+                        <span>정보처리기사</span>
+                        <span>한국산업인력공단</span>
+                    </div>
+                    <div class="content-row license-row">
+                        <span>2039.03</span>
+                        <span>SQLD</span>
+                        <span>한국데이터산업진흥원</span>
+                    </div>
+                    <div class="content-row license-row">
+                        <span>2039.03</span>
+                        <span>컴퓨터활용능력 1급</span>
+                        <span>대한상공회의소</span>
+                    </div>
+                    <div class="content-row license-row">
+                        <span>2039.03</span>
+                        <span>웹디자인기능사</span>
+                        <span>한국산업인력공단</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resume-section">
+                <div class="section-label">
+                    <h2>경력사항</h2>
+                    <p>Experience</p>
+                </div>
+
+                <div class="section-content">
+                    <div class="content-row">
+                        <span>2039.03 - 2039.02</span>
+                        <span>대학교</span>
+                        <span>인문계</span>
+                        <span>-</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resume-section">
+                <div class="section-label">
+                    <h2>기술사항</h2>
+                    <p>Skill Stacks</p>
+                </div>
+
+                <div class="section-content">
+                    <div class="content-row license-row">
+                        <span>Frontend</span>
+                        <span>HTML, CSS, JavaScript</span>
+                        <span>기본 활용 가능</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>
