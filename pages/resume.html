@@ -138,20 +138,86 @@
             grid-template-columns: 1.4fr 1.5fr 1.8fr;
         }
 
+        .stack-row {
+            grid-template-columns: 1.4fr 1.5fr 1.8fr;
+        }
+
         :root {
-    --resume-row-height: 32px;
-}
+            --resume-row-height: 32px;
+        }
 
-.info-row,
-.content-row {
-    min-height: var(--resume-row-height);
-    padding: 0;
-    align-items: center;
-}
+        .info-row,
+        .content-row {
+            min-height: var(--resume-row-height);
+            padding: 0;
+            align-items: center;
+        }
 
-.section-content.keep-rows {
-    min-height: calc(var(--resume-row-height) * 4);
-}
+        .section-content.keep-rows {
+            min-height: calc(var(--resume-row-height) * 4);
+        }
+
+        /* 기술사항 테이블: 이력서 톤에 맞춘 이미지 전용 스타일 */
+        .stack-table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            font-size: 13px;
+        }
+
+        .stack-table tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .stack-table th {
+            width: 120px;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: middle;
+            font-size: 12px;
+            font-weight: 800;
+            color: #333333;
+            background-color: #f4f4f4;
+            border-right: 1px solid #dddddd;
+            letter-spacing: 0.2px;
+        }
+
+        .stack-table td {
+            padding: 8px 12px;
+            vertical-align: middle;
+        }
+
+        .stack-list {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .stack-item {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #d8d8d8;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-sizing: border-box;
+        }
+
+        .stack-item img {
+            display: block;
+            width: 26px;
+            height: 26px;
+            object-fit: contain;
+        }
+
+        /* 테이블 내부는 이미지 로고만 보이게 처리 */
+        .stack-item span {
+            display: none;
+        }
     </style>
 </head>
 
@@ -184,7 +250,7 @@
                     </div>
                     <div class="info-row">
                         <span>생년월일</span>
-                        <strong>1991.02.25</strong>
+                        <strong>1991.02.25</strong> 
                     </div>
                     <div class="info-row">
                         <span>연락처</span>
@@ -266,6 +332,18 @@
                         <span>교육팀</span>
                         <span>사원</span>
                     </div>
+                    <div class="content-row">
+                        <span>2024.03 - 2024.12</span>
+                        <span>(주)행복케어</span>
+                        <span>개발팀</span>
+                        <span>사원</span>
+                    </div>
+                    <div class="content-row">
+                        <span>2023.06 - 2023.12</span>
+                        <span>JcurveEnt</span>
+                        <span>개발팀</span>
+                        <span>사원</span>
+                    </div>
                 </div>
             </section>
 
@@ -276,11 +354,70 @@
                 </div>
 
                 <div class="section-content">
-                    <div class="content-row license-row">
-                        <span>Frontend</span>
-                        <span>HTML, CSS, JavaScript</span>
-                        <span>기본 활용 가능</span>
-                    </div>
+                    <table class="stack-table">
+                        <tbody>
+                            <tr>
+                                <th>Frontend</th>
+                                <td>
+                                    <div class="stack-list">
+                                        <div class="stack-item">
+                                            <img src="/images/stack/html5.svg" alt="HTML5 로고">
+                                        </div>
+                                        <div class="stack-item">
+                                            <img src="/images/stack/css3.svg" alt="CSS3 로고">
+                                        </div>
+                                        <div class="stack-item">
+                                            <img src="/images/stack/javascript.svg" alt="JavaScript 로고">
+                                        </div>
+                                        <div class="stack-item">
+                                            <img src="/images/stack/react.svg" alt="React 로고">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>Backend</th>
+                                <td>
+                                    <div class="stack-list">
+                                        <div class="stack-item">
+                                            <img src="/images/stack/nodejs.svg" alt="Node.js 로고">
+                                            <span>Node.js</span>
+                                        </div>
+                                        <div class="stack-item">
+                                            <img src="/images/stack/fastapi.svg" alt="FastAPI 로고">
+                                            <span>FastAPI</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>Client</th>
+                                <td>
+                                    <div class="stack-list">
+                                        <div class="stack-item">
+                                            <img src="/images/stack/unity.svg" alt="Unity 로고">
+                                        </div>
+                                        <div class="stack-item">
+                                            <img src="/images/stack/csharp.svg" alt="C# 로고">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>Database</th>
+                                <td>
+                                    <div class="stack-list">
+                                        <div class="stack-item">
+                                            <img src="/images/stack/mysql.svg" alt="MySQL 로고">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
         </main>
